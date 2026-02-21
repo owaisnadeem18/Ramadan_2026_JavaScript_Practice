@@ -17,3 +17,62 @@
 // 2. What is hoisting in JavaScript?
 // Explain the difference between variable hoisting and function hoisting, with examples.
 
+// Hoisting is JavaScript’s behavior of allocating memory for variables and functions during the creation phase of the execution context before the code is executed.
+
+// 🔹 Variable Hoisting vs Function Hoisting (Short & Clear)
+// ✅ Variable Hoisting
+
+// var → hoisted and initialized with undefined
+
+// let / const → hoisted but kept in Temporal Dead Zone (TDZ)
+
+// Examples: 
+
+// 1. 
+console.log(a); // undefined
+var a = 10;
+
+// 2. 
+console.log(b)
+let b = 20;
+// ReferenceError: Cannot access 'b' before initialization
+
+// ✅ Function Hoisting:
+
+// Function declarations are fully hoisted
+
+// Function expressions behave like variables
+
+// 🔹 Example (Normal Function Expression)
+const greet = function () {
+  console.log("Hello");
+};
+
+greet(); // ✅ works
+
+// 🔹 Function Declaration vs Function Expression (Clear Difference)
+
+// ✅ Function Declaration
+
+sayHi();
+
+function sayHi() {
+  console.log("Hi");
+}
+
+// ✔ Fully hoisted
+// ✔ Call before definition allowed
+
+// ❌ Function Expression
+sayHi(); // ❌ Error
+
+const sayHi = function () {
+  console.log("Hi");
+};
+
+// ❌ Not hoisted like declarations
+// ❌ Variable rules apply (let / const / var)
+
+// Summary: 
+// If a function is assigned to a variable, it is called a function expression, and it follows variable hoisting rules rather than function hoisting. This means that if you try to call a function expression before it is defined, you will get an error, whereas with a function declaration, you can call it before its definition due to hoisting.
+
