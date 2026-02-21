@@ -76,3 +76,8 @@ const sayHi = function () {
 // Summary: 
 // If a function is assigned to a variable, it is called a function expression, and it follows variable hoisting rules rather than function hoisting. This means that if you try to call a function expression before it is defined, you will get an error, whereas with a function declaration, you can call it before its definition due to hoisting.
 
+// 🧠 IIFE (Immediately Invoked Function Expression):
+
+// An IIFE is a function that is defined and executed immediately after its creation.
+// It does not need to be called separately — it runs automatically.
+
