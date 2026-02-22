@@ -29,12 +29,12 @@
 // Examples: 
 
 // 1. 
-console.log(a); // undefined
-var a = 10;
+// console.log(a); // undefined
+// var a = 10;
 
-// 2. 
-console.log(b)
-let b = 20;
+// // 2. 
+// console.log(b)
+// let b = 20;
 // ReferenceError: Cannot access 'b' before initialization
 
 // ✅ Function Hoisting:
@@ -44,31 +44,31 @@ let b = 20;
 // Function expressions behave like variables
 
 // 🔹 Example (Normal Function Expression)
-const greet = function () {
-  console.log("Hello");
-};
+// const greet = function () {
+//   console.log("Hello");
+// };
 
-greet(); // ✅ works
+// greet(); // ✅ works
 
 // 🔹 Function Declaration vs Function Expression (Clear Difference)
 
 // ✅ Function Declaration
 
-sayHi();
+// sayHi();
 
-function sayHi() {
-  console.log("Hi");
-}
+// function sayHi() {
+//   console.log("Hi");
+// }
 
 // ✔ Fully hoisted
 // ✔ Call before definition allowed
 
 // ❌ Function Expression
-sayHi(); // ❌ Error
+// sayHi(); // ❌ Error
 
-const sayHi = function () {
-  console.log("Hi");
-};
+// const sayHi = function () {
+//   console.log("Hi");
+// };
 
 // ❌ Not hoisted like declarations
 // ❌ Variable rules apply (let / const / var)
@@ -79,5 +79,15 @@ const sayHi = function () {
 // 🧠 IIFE (Immediately Invoked Function Expression):
 
 // An IIFE is a function that is defined and executed immediately after its creation.
-// It does not need to be called separately — it runs automatically.
+// It does not need to be called separately , it runs automatically.
+
+// examples of IIFE:
+
+(function sayHi() {
+    console.log("Hello")
+}());
+
+(function SayHelloToPerson (name) {
+    console.log(`Hello ${name}`)
+}("Owais"))
 
